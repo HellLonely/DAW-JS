@@ -4,6 +4,9 @@
 
 - [Variables](#variables)
 - [Tipos de datos](#datos)
+- [Operadores](#operadores)
+    - [Operadores Basicos](#operadores-basicos)
+    - [Rarezas](#rarezas)
 
 ## Variables
 
@@ -187,4 +190,69 @@ Los tipos de datos primitivos son valores simples que representan datos básicos
   ```
 
   En cambio ```null``` es un valor que se utiliza en javaScript para decir que esa variable no tiene valor conocido.
+</div>
+
+### Operadores
+
+#### Operadores Basicos
+<div id='operadores-basicos'>
+<p>Podeis ver todos los operadores basicos que existen en JavaScript</p>
+
+```javascript
+let x = 5;
+
+let suma = 5 + 3; // Suma
+
+let resta = 10 - 4; // Resta
+
+let producto = 6 * 7; // Multiplicacion
+
+let division = 20 / 4; // Division
+
+let residuo = 10 % 3; // Modulo
+
+let menorQue = 4 < 7; // Menor que
+
+let mayorQue = 10 > 6; // Mayor que
+
+let and = true && false; // and es false
+
+let or = true || false; // or es true
+
+let not = !true; // not es false
+
+```
+
+</div>
+
+#### Rarezas 
+
+<div id='operadores-rarezas'>
+<p>En JavaScript existen una serie de rarezas o comportamiento raros debido a las reglas que existen sobre los tipos. Os dejamos aqui una lista de estas rarezas.</p>
+
+<b>Operador de igualdad</b>
+
+Javascript convierte la cadena de texto a un numero para comparar.
+
+```javascript
+console.log(5 == "5"); // Salida -> true,
+```
+<b>NaN (Not-a-Number)</b>
+
+NaN es un valor especial que representa que un numero no existe. Si NaN se compara consigo mismo da false.
+
+
+```javascript
+console.log(NaN == NaN); // Salida -> false
+```
+<b>Operador or y valores por defecto</b>
+
+Este operador asigna un valor por defecto si una variable es ```undefined``` o ```null```.
+
+```javascript
+let nombre = undefined;
+let nombre2 = nombre || "Alfonso"; // nombre2 -> Alfonso
+
+```
+
 </div>

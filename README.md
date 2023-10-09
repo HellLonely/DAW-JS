@@ -191,6 +191,7 @@ Los tipos de datos primitivos son valores simples que representan datos básicos
 
   En cambio ```null``` es un valor que se utiliza en javaScript para decir que esa variable no tiene valor conocido.
 </div>
+<hr>
 
 ### Operadores
 

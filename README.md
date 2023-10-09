@@ -3,8 +3,9 @@
 ## Indice
 
 - [Variables](#variables)
+- [Tipos de datos](#datos)
 
-### Variables
+## Variables
 
 <div id='variables'>
 <p>En JavaScript existen tres tipos de varibles distintos.</p>
@@ -65,4 +66,125 @@ console.log(nombre); // Salida ->  Alfonso
 console.log(apellido);// Salida ->  apellido is not defined
 ```
 
+</div>
+
+## Tipos de datos
+<div id='datos'>
+<p>Los datos de JS se dividen en dos principales tipos Primitivos y Compuestos</p>
+
+### Primitivos
+
+Los tipos de datos primitivos son valores simples que representan datos básicos
+
+  1. <b>Number: Representa valores numéricos, ya sean enteros o decimales.</b>
+   
+  ```javascript
+    let edad = 25;
+    let precio = 19.99;
+  ```
+  2. <b>String: Representa texto entre comillas simples o dobles.</b>
+   
+  ```javascript
+    let nombre = "Juan";
+    let mensaje = '¡Hola, mundo!';
+  ```
+  3. <b>Boolean: Representa un valor verdadero o falso.</b>
+   
+  ```javascript
+    let esMayorDeEdad = true;
+    let esDiaSoleado = false;
+  ```
+  4. <b>Undefined: Representa una variable que ha sido declarada pero aún no se le ha asignado ningún valor.</b>
+   
+  ```javascript
+    let x;
+    console.log(x); // undefined
+  ```
+  5. <b>Null: Representa la ausencia intencional de un valor o un objeto vacío.</b>
+   
+  ```javascript
+    let noHayValor = null;
+  ```
+
+
+### Compuestos
+<p>Los tipos de datos compuestos son estructuras de datos más complejas que pueden contener varios valores y tienen métodos y propiedades propias. </p>
+
+  6. <b>Array: Representa una lista de valores ordenados.</b>
+  ```javascript
+    let colores = ['rojo', 'verde', 'azul'];
+  ```
+  7. <b>Object: Representa una colección de pares clave-valor, donde las claves son cadenas de texto que identifican las propiedades.</b>
+   
+  ```javascript
+    let persona = {
+    nombre: 'María',
+    edad: 30,
+    };
+
+    console.log(persona.nombre) // María
+    console.log(persona.edad) // 30
+    console.log(persona.apellidos) // Undefined
+  ```
+
+  para acceder a los valores dentro de los objetos simplemente hacemos ```objeto.propiedad```. Si la propiedad no existe devuelve ```Undefined```.
+
+  8. <b>Function: Representa un fragmento de código que se puede ejecutar.</b>
+   
+  ```javascript
+    function saludar(nombre) {
+    console.log(`¡Hola, ${nombre}!`);
+    }
+
+    saludar('Ernesto') // ¡Hola, Ernesto!
+  ```
+
+  Esta es la sintaxis normal para crear una funcion pero tambien existen las llamadas funciones de flecha que su sintaxis seria la siguiente.
+
+  ```javascript
+    const saludar = (nombre) => {
+        console.log(`¡Hola, ${nombre}!`);
+    }
+
+    saludar('Ernesto') // ¡Hola, Ernesto!
+  ```
+
+  Estas dos formas de escribir las funciones no varían el resultado final. Se pueden usar de forma indistinta
+
+  8. <b>Date: Representa una fecha y hora específicas.</b>
+   
+  ```javascript
+    let fechaActual = new Date();
+    console.log(fechaActual) // Mon Oct 09 2023 20:28:22 GMT+0200 (hora de verano de Europa central)
+  ```
+
+  9. <b>RegExp: Representa un patrón de búsqueda en cadenas de texto.</b>
+
+  ```javascript
+    let patron = /[0-9]+/;
+  ```
+### Undefined vs Null
+  <p>Son dos tipos de datos que se utilizan para representar la ausencia de valor, pero tienen diferencias.</p>
+
+  ```javascript
+    let variableSinValor;
+    console.log(variableSinValor); // undefined
+
+    let Alumno = {
+        nombre: "Ernesto",
+        notas: [7, 4, 9]
+    };
+    console.log(Alumno.nombre); // Ernesto
+    console.log(Alumno.apellidos); // undefined
+  ```
+
+  ```Undefined``` significa que la variable ha sido creada pero no se le dio valor ```variableSinValor```. En un objeto tambien obtienes undefined cuando intentas acceder a una propiedad que no existe como ```Alumno.apellidos```.
+
+  Undefinded es el valor por defecto de una variable en JavaScript.
+
+  ```javascript
+  let valorNulo = null;
+  ```
+
+  En cambio ```null``` es un valor que se utiliza en javaScript para decir que esa variable no tiene valor conocido.
 </div>

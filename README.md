@@ -257,3 +257,158 @@ let nombre2 = nombre || "Alfonso"; // nombre2 -> Alfonso
 ```
 
 </div>
+
+
+
+## Estructuras de control
+
+
+<div>
+
+### If y Switch 
+
+
+<b>Estructura IF</b>
+
+Estructura basada en el control de condicones.
+
+```javascript
+  if (condición) {
+    // Código a ejecutar si la condición es verdadera
+  } else {
+    // Código a ejecutar si la condición es falsa
+  }
+```
+
+Ejemplo:
+
+```javascript
+let numero = 2
+
+if (numero < 5){
+  numero += 1;
+}else {
+  numero -= 1;
+}
+``` 
+<b>Estructura Switch</b>
+
+Permite seleccionar uno de varios bloques de código para ejecutar
+
+```javascript
+switch (expresión) {
+  case valor1:
+    // Código a ejecutar si la expresión coincide con valor1
+    break;
+  case valor2:
+    // Código a ejecutar si la expresión coincide con valor2
+    break;
+  // Más casos aquí
+  default:
+    // Código a ejecutar si la expresión no coincide con ninguno de los casos anteriores
+}
+```
+Ejemplo:
+
+```javascript
+var item = 'Coche';
+
+switch (item) {
+  case 'Coche':
+    console.log('Brum Brum');
+    break;
+  case 'Moto':
+    console.log('Fium Fium');
+    break;
+  default:
+    console.log('No se que eres')
+}
+```
+
+### Bucles (Loops)
+
+<b>For</b>
+
+Se utiliza para ejecutar un bloque de código un número específico de veces.
+
+```javascript
+for (inicialización; condición; actualización) {
+  // Código a ejecutar en cada iteración
+}
+```
+Ejemplo: 
+
+```javascript
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+```
+<b>While</b>
+
+Se ejecuta mientras una condición sea verdadera.
+
+```javascript
+while (condición) {
+  // Código a ejecutar mientras la condición sea verdadera
+}
+```
+
+Ejemplo:
+
+```javascript
+let permiso = true;
+
+while (permiso == true) {
+  console.log('Tienes permiso');
+}
+```
+
+
+<b>do...while</b>
+
+Similar al bucle while, pero garantiza que el bloque de código se ejecutará al menos una vez.
+
+```javascript
+do {
+  // Código a ejecutar al menos una vez
+} while (condición);
+```
+
+Ejemplo: 
+
+```javascript
+var i = 0
+
+do {
+  console.log(i)
+  i++;
+} while (i < 10);
+```
+
+<b>for...in</b>
+
+Se utiliza para recorrer <strong>propiedades de un objeto</strong>. No se utiliza para recorrer arrays.
+
+Ejemplo: 
+
+```javascript
+const objeto = { a: 1, b: 2, c: 3 };
+
+for (let propiedad in objeto) {
+  console.log(propiedad + ": " + objeto[propiedad]);
+}
+```
+
+<b>for...of</b>
+
+Se utiliza para recorrer elementos de un objeto iterable, como arrays.
+
+```javascript
+const miArray = [1, 2, 3, 4, 5];
+
+for (let elemento of miArray) {
+  console.log(elemento);
+}
+```
+
+</div>

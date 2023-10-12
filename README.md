@@ -7,6 +7,10 @@
 - [Operadores](#operadores)
     - [Operadores Basicos](#operadores-basicos)
     - [Rarezas](#rarezas)
+- [Estructuras de control](#estructuras-de-control) 
+    - [If y Switch](#if-y-switch)
+    - [Bucles (Loops)](#bucles-loops)
+
 
 ## Variables
 
